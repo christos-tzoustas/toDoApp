@@ -1,0 +1,39 @@
+.name-prompt {
+	@include u-center-abs;
+	width: 35%;
+    text-align: center;
+    transition: all .3s;
+
+	&__form-label {
+		display: block;
+		color: $color-secondary;
+		font-size: $font-size-default;
+	}
+
+	&__form-input {
+		width: 100%;
+		background-color: $color-secondary;
+		border: none;
+		border-radius: 1000px;
+		padding: 2.2rem 4rem;
+		color: $color-primary;
+		font-size: $font-size-default;
+		position: relative;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 3rem rgba($color-black, .1);
+		}
+	}
+
+	&__form-button {
+		position: absolute;
+		right: 5%;
+		bottom: 19%;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: $color-primary;
+        font-size: 2rem;
+	}
+}

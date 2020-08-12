@@ -1,0 +1,81 @@
+.todo-box {
+	@include u-center-abs;
+	background-color: $color-secondary;
+	color: $color-primary;
+	padding: 3rem 3.3rem;
+	box-shadow: 0 2rem 8rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    transition: all .3s;
+
+	&__heading {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: $font-size-default;
+	}
+
+	&__subheading {
+		font-weight: 400;
+	}
+
+	&__form-wrapper {
+		position: relative;
+	}
+
+	&__form-label {
+		display: block;
+		margin-top: 1rem;
+		margin-left: 3rem;
+	}
+
+	&__form-input {
+		width: 90%;
+		margin-left: 3rem;
+		padding: .8rem 1.2rem;
+		border: none;
+		border-radius: 3px;
+		border-bottom: 3px solid transparent;
+		transition: all .2s;
+		color: $color-primary;
+
+		&:focus {
+			outline: none;
+			border-bottom: 3px solid $color-primary;
+			box-shadow: 0 1rem 3rem rgba($color-black, .1);
+		}
+	}
+
+	&__form-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: transparent;
+		border: none;
+		color: $color-primary;
+		font-size: $font-size-default;
+		cursor: pointer;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin-top: 5rem;
+		font-size: $font-size-default;
+	}
+
+	&__list-item {
+		position: relative;
+		padding: 1.5rem 4.3rem;
+		cursor: pointer;
+
+		&--completed {
+			text-decoration: line-through 1px;
+		}
+	}
+
+	&__list-delete {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+}
